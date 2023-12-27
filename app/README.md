@@ -46,4 +46,5 @@ make update
 On *nix and macOS to manage Java versions we recommend using asdf https://github.com/asdf-vm/asdf. 
 
    
-[https://asciinema.org/a/RelE4kmUMu1BXT01iohEfpybX]: #"ссылка на первый запуск игры"
+[![asciicast](https://asciinema.org/a/RelE4kmUMu1BXT01iohEfpybX.svg)](https://asciinema.org/a/RelE4kmUMu1BXT01iohEfpybX)
+[![asciicast](https://asciinema.org/a/VkixfN5PvM8oRJ1KSJrmQWeAH.svg)](https://asciinema.org/a/VkixfN5PvM8oRJ1KSJrmQWeAH)
