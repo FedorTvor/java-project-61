@@ -21,6 +21,10 @@ public class Engine {
             System.out.println("Congratulations, " + Player.getName());
         }
     }
+    public static void congratulations() {
+        System.out.println("Correct!");
+        System.out.println("Congratulations, " + Player.getName());
+    }
     public static void uncorrectAnswer(String answer, String correctAnswer) {
         System.out.println("'" + answer + "' is wrong answer ;(. "
                 + "Correct answer was '" + correctAnswer + "'.\n"
@@ -32,5 +36,14 @@ public class Engine {
                 + "Correct answer was '" + correctAnswer + "'.\n"
                 + "Let's try again, " + Player.getName());
 
+    }
+    public static int gcd(int a, int b) {
+        int result = 0;
+        for (int i = 1; i <= Math.max(a, b); i++) {
+            if (a % i == 0 && b % i == 0) {
+                result = i;
+            }
+        }
+        return result;
     }
 }

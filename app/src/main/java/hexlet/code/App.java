@@ -8,6 +8,7 @@ public class App {
                 + "1 - Greet\n"
                 + "2 - Even\n"
                 + "3 - Calc\n"
+                + "4 - GCD\n"
                 + "0 - Exit");
         var choise = scanner.next();
         System.out.println("Your choice: " + choise);
@@ -15,10 +16,13 @@ public class App {
             Engine.greeting();
         } else if (choise.equals("2")) {
             Engine.greeting();
-            GameLogic.evenNumber(Player.getName());
+            GameLogic.evenNumber();
         } else if (choise.equals("3")) {
             Engine.greeting();
-            GameLogic.calc(Player.getName());
+            GameLogic.calc();
+        } else if (choise.equals("4")) {
+            Engine.greeting();
+            GameLogic.greatestCommonDivisor();
         } else {
             System.out.println("bye bye");
         }

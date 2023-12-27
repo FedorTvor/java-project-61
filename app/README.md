@@ -48,3 +48,4 @@ On *nix and macOS to manage Java versions we recommend using asdf https://github
    
 [![asciicast](https://asciinema.org/a/RelE4kmUMu1BXT01iohEfpybX.svg)](https://asciinema.org/a/RelE4kmUMu1BXT01iohEfpybX)
 [![asciicast](https://asciinema.org/a/VkixfN5PvM8oRJ1KSJrmQWeAH.svg)](https://asciinema.org/a/VkixfN5PvM8oRJ1KSJrmQWeAH)
+[![asciicast](https://asciinema.org/a/ZiHrWM42tFoH0PNcLmDvPX7Gb.svg)](https://asciinema.org/a/ZiHrWM42tFoH0PNcLmDvPX7Gb)
