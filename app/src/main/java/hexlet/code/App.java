@@ -10,6 +10,7 @@ public class App {
                 + "3 - Calc\n"
                 + "4 - GCD\n"
                 + "5 - Progression\n"
+                + "6 - Prime\n"
                 + "0 - Exit");
         var choise = scanner.next();
         System.out.println("Your choice: " + choise);
@@ -27,12 +28,12 @@ public class App {
         } else if (choise.equals("5")) {
             Engine.greeting();
             GameLogic.progression();
-
-        } else {
-            System.out.println("bye bye");
+        } else if (choise.equals("6")) {
+            Engine.greeting();
+            GameLogic.prime();
+        } else if (choise.equals("0")) {
+            System.out.println("Exit");
         }
     }
-
-
 }
 

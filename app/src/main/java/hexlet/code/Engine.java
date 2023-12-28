@@ -21,10 +21,6 @@ public class Engine {
             System.out.println("Congratulations, " + Player.getName());
         }
     }
-    public static void congratulations() {
-        System.out.println("Correct!");
-        System.out.println("Congratulations, " + Player.getName());
-    }
     public static void uncorrectAnswer(String answer, String correctAnswer) {
         System.out.println("'" + answer + "' is wrong answer ;(. "
                 + "Correct answer was '" + correctAnswer + "'.\n"
@@ -45,5 +41,17 @@ public class Engine {
             }
         }
         return result;
+    }
+    public static boolean isSimple(Integer number) {
+        if (number < 2) {
+            return false;
+        } else {
+            for (int i = 2; i < number / 2; i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
