@@ -9,6 +9,7 @@ public class App {
                 + "2 - Even\n"
                 + "3 - Calc\n"
                 + "4 - GCD\n"
+                + "5 - Progression\n"
                 + "0 - Exit");
         var choise = scanner.next();
         System.out.println("Your choice: " + choise);
@@ -23,6 +24,10 @@ public class App {
         } else if (choise.equals("4")) {
             Engine.greeting();
             GameLogic.greatestCommonDivisor();
+        } else if (choise.equals("5")) {
+            Engine.greeting();
+            GameLogic.progression();
+
         } else {
             System.out.println("bye bye");
         }
