@@ -1,5 +1,10 @@
 package hexlet.code;
 
+import hexlet.code.games.EvenNumber;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Gcd;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
@@ -18,19 +23,19 @@ public class App {
             Engine.greeting();
         } else if (choise.equals("2")) {
             Engine.greeting();
-            GameLogic.evenNumber();
+            EvenNumber.evenNumber();
         } else if (choise.equals("3")) {
             Engine.greeting();
-            GameLogic.calc();
+            Calc.calc();
         } else if (choise.equals("4")) {
             Engine.greeting();
-            GameLogic.greatestCommonDivisor();
+            Gcd.greatestCommonDivisor();
         } else if (choise.equals("5")) {
             Engine.greeting();
-            GameLogic.progression();
+            Progression.progression();
         } else if (choise.equals("6")) {
             Engine.greeting();
-            GameLogic.prime();
+            Prime.prime();
         } else if (choise.equals("0")) {
             System.out.println("Exit");
         }
