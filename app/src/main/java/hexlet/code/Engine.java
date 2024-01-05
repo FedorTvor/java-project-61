@@ -24,13 +24,13 @@ public class Engine {
     public static void uncorrectAnswer(String answer, String correctAnswer) {
         System.out.println("'" + answer + "' is wrong answer ;(. "
                 + "Correct answer was '" + correctAnswer + "'.\n"
-                + "Let's try again, " + playerName);
+                + "Let's try again, " + playerName + "!");
 
     }
     public static void uncorrectAnswer(int answer, int correctAnswer) {
         System.out.println("'" + answer + "' is wrong answer ;(. "
                 + "Correct answer was '" + correctAnswer + "'.\n"
-                + "Let's try again, " + playerName);
+                + "Let's try again, " + playerName + "!");
 
     }
     public static int gcd(int a, int b) {
