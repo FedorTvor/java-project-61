@@ -18,7 +18,7 @@ public class Engine {
     public static void congratulations(int count) {
         System.out.println("Correct!");
         if (count == 2) {
-            System.out.println("Congratulations, " + playerName);
+            System.out.println("Congratulations, " + playerName + "!");
         }
     }
     public static void uncorrectAnswer(String answer, String correctAnswer) {
