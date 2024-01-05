@@ -13,7 +13,7 @@ public class Calc {
             var randomNumber2 = (int) (Math.random() * 100);
             if (randomGame % 2 == 0) {
                 System.out.println("What is the result of the expression?\n"
-                        + "Question:" + randomNumber1 + " + " + randomNumber2);
+                        + "Question: " + randomNumber1 + " + " + randomNumber2);
                 int answer = scanner.nextInt();
                 System.out.println("Your answer: " + answer);
                 if (answer == randomNumber1 + randomNumber2) {
@@ -25,7 +25,7 @@ public class Calc {
                 }
             } else if (randomGame % 3 == 0) {
                 System.out.println("What is the result of the expression?\n"
-                        + "Question:" + randomNumber1 + " - " + randomNumber2);
+                        + "Question: " + randomNumber1 + " - " + randomNumber2);
                 int answer = scanner.nextInt();
                 System.out.println("Your answer: " + answer);
                 if (answer == randomNumber1 - randomNumber2) {
@@ -37,7 +37,7 @@ public class Calc {
                 }
             } else {
                 System.out.println("What is the result of the expression?\n"
-                        + "Question:" + randomNumber1 + " * " + randomNumber2);
+                        + "Question: " + randomNumber1 + " * " + randomNumber2);
                 int answer = scanner.nextInt();
                 System.out.println("Your answer: " + answer);
                 if (answer == randomNumber1 * randomNumber2) {

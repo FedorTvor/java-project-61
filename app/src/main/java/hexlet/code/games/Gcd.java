@@ -12,7 +12,7 @@ public class Gcd {
             var randomNumber2 = (int) (Math.random() * 100);
             int num = Engine.gcd(randomNumber1, randomNumber2);
             System.out.println("Find the greatest common divisor of given numbers.\n"
-                    + "Question:" + randomNumber1 + " " + randomNumber2);
+                    + "Question: " + randomNumber1 + " " + randomNumber2);
             int answer = scanner.nextInt();
             if (answer == num) {
                 Engine.congratulations(count);

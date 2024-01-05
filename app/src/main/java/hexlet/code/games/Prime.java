@@ -10,7 +10,7 @@ public class Prime {
         for (var count = 0; count <= 2; count++) {
             int randomNumber = (int) (Math.random() * 10);
             System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.\n"
-                    + "Question:" + randomNumber
+                    + "Question: " + randomNumber
                     + "\nYour answer:");
             String answer = scanner.next();
             if (Engine.isSimple(randomNumber)) {

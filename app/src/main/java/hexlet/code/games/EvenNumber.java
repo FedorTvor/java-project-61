@@ -10,7 +10,7 @@ public class EvenNumber {
         for (var count = 0; count <= 2; count++) {
             int randomNumber = (int) (Math.random() * 10);
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.\n"
-                    + "Question:" + randomNumber
+                    + "Question: " + randomNumber
                     + "\nYour answer:");
             String answer = scanner.next();
             if (randomNumber % 2 == 0) {
