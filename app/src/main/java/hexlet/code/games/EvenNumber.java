@@ -7,8 +7,9 @@ import java.util.Scanner;
 public class EvenNumber {
     public static void evenNumber() {
         Scanner scanner = new Scanner(System.in);
+        var num = 10;
         for (var count = 0; count <= 2; count++) {
-            int randomNumber = Engine.getRandomNumber(10);
+            int randomNumber = Engine.getRandomNumber(num);
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.\n"
                     + "Question: " + randomNumber
                     + "\nYour answer:");
