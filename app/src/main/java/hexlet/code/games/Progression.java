@@ -9,14 +9,12 @@ public class Progression {
         Scanner scanner = new Scanner(System.in);
         for (var count = 0; count <= 2; count++) {
             int[] result = new int[5];
-            int num = (int) (Math.random() * 10);
-            result[0] = (int) (Math.random() * 100);
+            int num = Engine.getRandomNumber(10);
+            result[0] = Engine.getRandomNumber(100);
             if (result[0] != result[1]) {
                 for (var i = 1; i < result.length; i++) {
                     result[i] = result[i - 1] + num;
                 }
-            } else {
-                num = (int) (Math.random() * 10);
             }
             System.out.println("What number is missing in the progression?\n"
                     + "Question: " + result[0] + " " + result[1] + " .. " + result[3] + " " + result[4]);

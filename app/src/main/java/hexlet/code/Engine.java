@@ -3,7 +3,13 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static String playerName;
+    private static String playerName;
+
+    public static int getRandomNumber(int num) {
+        var randomNumber = (int) (Math.random() * num);
+        return randomNumber;
+
+    }
     public static String getPlayerName() {
         Scanner scanner = new Scanner(System.in);
         playerName = scanner.next();

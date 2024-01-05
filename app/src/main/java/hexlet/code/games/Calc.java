@@ -8,9 +8,9 @@ public class Calc {
     public static void calc() {
         Scanner scanner = new Scanner(System.in);
         for (var count = 0; count <= 2; count++) {
-            var randomGame = (int) (Math.random() * 10);
-            var randomNumber1 = (int) (Math.random() * 100);
-            var randomNumber2 = (int) (Math.random() * 100);
+            var randomGame = Engine.getRandomNumber(10);
+            var randomNumber1 = Engine.getRandomNumber(100);
+            var randomNumber2 = Engine.getRandomNumber(100);
             if (randomGame % 2 == 0) {
                 System.out.println("What is the result of the expression?\n"
                         + "Question: " + randomNumber1 + " + " + randomNumber2);
