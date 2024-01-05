@@ -7,9 +7,11 @@ import java.util.Scanner;
 public class Progression {
     public static void progression() {
         Scanner scanner = new Scanner(System.in);
-        var massivLength = 5;
+        final int massiveLength = 5;
+        final int massivePosition3 = 3;
+        final int massivePosition4 = 4;
         for (var count = 0; count <= 2; count++) {
-            int[] result = new int[massivLength];
+            int[] result = new int[massiveLength];
             int num = Engine.getRandomNumber1();
             result[0] = Engine.getRandomNumber2();
             if (result[0] != result[1]) {
@@ -19,7 +21,7 @@ public class Progression {
             }
             System.out.println("What number is missing in the progression?\n"
                     + "Question: " + result[0] + " " + result[1] + " .. "
-                    + result[3] + " " + result[4]);
+                    + result[massivePosition3] + " " + result[massivePosition4]);
             int answer = scanner.nextInt();
             if (answer == result[2]) {
                 Engine.congratulations(count);
