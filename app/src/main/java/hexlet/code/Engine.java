@@ -5,15 +5,13 @@ import java.util.Scanner;
 public class Engine {
     private static String playerName;
 
-    private static int numberToMultiply1 = 10;
-    private static int numberToMultiply2 = 100;
+    private static final int NUMBER_TO_MULTIPLY_1 = 10;
+    private static final int NUMBER_TO_MULTIPLY_2 = 100;
     public static int getRandomNumber1() {
-        var randomNumber = (int) (Math.random() * numberToMultiply1);
-        return randomNumber;
+        return (int) (Math.random() * NUMBER_TO_MULTIPLY_1);
     }
     public static int getRandomNumber2() {
-        var randomNumber = (int) (Math.random() * numberToMultiply2);
-        return randomNumber;
+        return (int) (Math.random() * NUMBER_TO_MULTIPLY_2);
     }
     public static String getPlayerName() {
         Scanner scanner = new Scanner(System.in);
