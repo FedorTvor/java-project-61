@@ -12,12 +12,14 @@ public class Calc {
             var randomGame = Engine.getRandomNumber1();
             var randomNumber1 = Engine.getRandomNumber2();
             var randomNumber2 = Engine.getRandomNumber2();
+            var condition = "What is the result of the expression?";
+            var question1 = randomNumber1 + " + " + randomNumber2;
+            var question2 = randomNumber1 + " - " + randomNumber2;
+            var question3 = randomNumber1 + " * " + randomNumber2;
 
             if (randomGame % 2 == 0) {
-                System.out.println("What is the result of the expression?\n"
-                        + "Question: " + randomNumber1 + " + " + randomNumber2);
-                int answer = scanner.nextInt();
-                System.out.println("Your answer: " + answer);
+                Engine.intQestions(condition, question1);
+                var answer = Engine.getIntAnswer();
                 if (answer == randomNumber1 + randomNumber2) {
                     Engine.congratulations(count);
                 } else {
@@ -26,10 +28,8 @@ public class Calc {
                     break;
                 }
             } else if (randomGame % divider == 0) {
-                System.out.println("What is the result of the expression?\n"
-                        + "Question: " + randomNumber1 + " - " + randomNumber2);
-                int answer = scanner.nextInt();
-                System.out.println("Your answer: " + answer);
+                Engine.intQestions(condition, question2);
+                var answer = Engine.getIntAnswer();
                 if (answer == randomNumber1 - randomNumber2) {
                     Engine.congratulations(count);
                 } else {
@@ -38,10 +38,8 @@ public class Calc {
                     break;
                 }
             } else {
-                System.out.println("What is the result of the expression?\n"
-                        + "Question: " + randomNumber1 + " * " + randomNumber2);
-                int answer = scanner.nextInt();
-                System.out.println("Your answer: " + answer);
+                Engine.intQestions(condition, question3);
+                var answer = Engine.getIntAnswer();
                 if (answer == randomNumber1 * randomNumber2) {
                     Engine.congratulations(count);
                 } else {

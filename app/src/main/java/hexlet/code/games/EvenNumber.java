@@ -9,10 +9,11 @@ public class EvenNumber {
         Scanner scanner = new Scanner(System.in);
         for (var count = 0; count <= 2; count++) {
             int randomNumber = Engine.getRandomNumber1();
-            System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.\n"
-                    + "Question: " + randomNumber
-                    + "\nYour answer:");
-            String answer = scanner.next();
+            var conditions = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+            var qestions = "" + randomNumber;
+
+            Engine.stringQestion(conditions, qestions);
+            var answer = Engine.getStringAnswer();
             if (randomNumber % 2 == 0) {
                 if (answer.equals("yes")) {
                     Engine.congratulations(count);

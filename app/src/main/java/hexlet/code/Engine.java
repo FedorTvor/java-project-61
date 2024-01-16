@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Engine {
     private static String playerName;
+    private static String stringAnswer;
+    private static Integer intAnswer;
 
     private static final int NUMBER_TO_MULTIPLY_1 = 10;
     private static final int NUMBER_TO_MULTIPLY_2 = 100;
@@ -30,6 +32,26 @@ public class Engine {
             System.out.println("Congratulations, " + playerName + "!");
         }
     }
+    public static void stringQestion(String condition, String questions) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(condition
+                + "\nQuestion: " + questions
+                + "\nYour answer:");
+        stringAnswer = scanner.next();
+    }
+    public static String getStringAnswer() {
+        return stringAnswer;
+    }
+    public static void intQestions(String condition, String questions) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(condition
+                + "\nQuestion: " + questions
+                + "\nYour answer:");
+        intAnswer = scanner.nextInt();
+    }
+    public static int getIntAnswer() {
+        return intAnswer;
+    }
     public static void uncorrectAnswer(String answer, String correctAnswer) {
         System.out.println("'" + answer + "' is wrong answer ;(. "
                 + "Correct answer was '" + correctAnswer + "'.\n"
@@ -41,26 +63,5 @@ public class Engine {
                 + "Correct answer was '" + correctAnswer + "'.\n"
                 + "Let's try again, " + playerName + "!");
 
-    }
-    public static int gcd(int a, int b) {
-        int result = 0;
-        for (int i = 1; i <= Math.max(a, b); i++) {
-            if (a % i == 0 && b % i == 0) {
-                result = i;
-            }
-        }
-        return result;
-    }
-    public static boolean isSimple(Integer number) {
-        if (number < 2) {
-            return false;
-        } else {
-            for (int i = 2; i <= number / 2; i++) {
-                if (number % i == 0) {
-                    return false;
-                }
-            }
-        }
-        return true;
     }
 }

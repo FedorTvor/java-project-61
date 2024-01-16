@@ -19,10 +19,12 @@ public class Progression {
                     result[i] = result[i - 1] + num;
                 }
             }
-            System.out.println("What number is missing in the progression?\n"
-                    + "Question: " + result[0] + " " + result[1] + " .. "
-                    + result[massivePosition3] + " " + result[massivePosition4]);
-            int answer = scanner.nextInt();
+            var condition = "What number is missing in the progression?";
+            var question = result[0] + " " + result[1] + " .. "
+                    + result[massivePosition3] + " " + result[massivePosition4];
+
+            Engine.intQestions(condition, question);
+            var answer = Engine.getIntAnswer();
             if (answer == result[2]) {
                 Engine.congratulations(count);
             } else {
