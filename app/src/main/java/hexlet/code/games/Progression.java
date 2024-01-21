@@ -6,31 +6,40 @@ import java.util.Scanner;
 
 public class Progression {
     public static void progression() {
+        Engine.greeting();
         Scanner scanner = new Scanner(System.in);
-        final int massiveLength = 5;
-        final int massivePosition3 = 3;
-        final int massivePosition4 = 4;
-        for (var count = 0; count <= 2; count++) {
-            int[] result = new int[massiveLength];
-            int num = Engine.getRandomNumber1();
-            result[0] = Engine.getRandomNumber2();
-            if (result[0] != result[1]) {
-                for (var i = 1; i < result.length; i++) {
-                    result[i] = result[i - 1] + num;
-                }
-            }
-            var condition = "What number is missing in the progression?";
-            var question = result[0] + " " + result[1] + " .. "
-                    + result[massivePosition3] + " " + result[massivePosition4];
+        var finalCount = 2;
+        var condition = "What number is missing in the progression?";
 
-            Engine.intQestions(condition, question);
-            var answer = Engine.getIntAnswer();
-            if (answer == result[2]) {
-                Engine.congratulations(count);
+        for (var count = 0; count <= finalCount; count++) {
+            int[] massivProgression = randomMassiv(8, Engine.getRandomNumber1(), Engine.getRandomNumber1());
+            var correct = massivProgression[massivProgression.length / 2];
+            var question = showMassiv(massivProgression);
+            Engine.stepGame(condition, question, correct, count, finalCount);
+        }
+    }
+    public static int[] randomMassiv(int massiveLength, int step, int firstNum) {
+        int[] result = new int[massiveLength];
+        result[0] = firstNum;
+        if (result[0] != result[1] && result[0] != 0) {
+            for (var i = 1; i < result.length; i++) {
+                result[i] = result[i - 1] + step;
+            }
+        } else {
+            result[0] = Engine.getRandomNumber1();
+        }
+        return result;
+    }
+    public static String showMassiv(int[] massivProgression) {
+        var result = massivProgression[0] + " ";
+        var middle = massivProgression.length / 2;
+        for (var i = 1; i < massivProgression.length; i++) {
+            if (i == middle) {
+                result = result + " .. ";
             } else {
-                Engine.uncorrectAnswer(answer, result[2]);
-                break;
+                result = result + massivProgression[i] + " ";
             }
         }
+        return  result;
     }
 }

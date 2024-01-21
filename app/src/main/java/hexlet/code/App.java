@@ -22,19 +22,14 @@ public class App {
         if (choise.equals("1")) {
             Engine.greeting();
         } else if (choise.equals("2")) {
-            Engine.greeting();
             EvenNumber.evenNumber();
         } else if (choise.equals("3")) {
-            Engine.greeting();
             Calc.calc();
         } else if (choise.equals("4")) {
-            Engine.greeting();
             Gcd.greatestCommonDivisor();
         } else if (choise.equals("5")) {
-            Engine.greeting();
             Progression.progression();
         } else if (choise.equals("6")) {
-            Engine.greeting();
             Prime.prime();
         } else if (choise.equals("0")) {
             System.out.println("Exit");

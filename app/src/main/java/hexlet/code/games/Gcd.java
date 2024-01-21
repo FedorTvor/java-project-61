@@ -6,22 +6,16 @@ import java.util.Scanner;
 
 public class Gcd {
     public static void greatestCommonDivisor() {
+        Engine.greeting();
         Scanner scanner = new Scanner(System.in);
-        for (var count = 0; count <= 2; count++) {
+        var finalCount = 2;
+        for (var count = 0; count <= finalCount; count++) {
             var randomNumber1 = Engine.getRandomNumber2();
             var randomNumber2 = Engine.getRandomNumber2();
-            int num = gcd(randomNumber1, randomNumber2);
+            var correct = gcd(randomNumber1, randomNumber2);
             var condition = "Find the greatest common divisor of given numbers.";
             var question = randomNumber1 + " " + randomNumber2;
-
-            Engine.intQestions(condition, question);
-            var answer = Engine.getIntAnswer();
-            if (answer == num) {
-                Engine.congratulations(count);
-            } else {
-                Engine.uncorrectAnswer(answer, num);
-                break;
-            }
+            Engine.stepGame(condition, question, correct, count, finalCount);
         }
     }
     public static int gcd(int a, int b) {

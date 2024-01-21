@@ -26,31 +26,11 @@ public class Engine {
         String name = getPlayerName();
         System.out.println("Hello, " + name + "!");
     }
-    public static void congratulations(int count) {
+    public static void congratulations(int count, int finalCount) {
         System.out.println("Correct!");
-        if (count == 2) {
+        if (count == finalCount) {
             System.out.println("Congratulations, " + playerName + "!");
         }
-    }
-    public static void stringQestion(String condition, String questions) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(condition
-                + "\nQuestion: " + questions
-                + "\nYour answer:");
-        stringAnswer = scanner.next();
-    }
-    public static String getStringAnswer() {
-        return stringAnswer;
-    }
-    public static void intQestions(String condition, String questions) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(condition
-                + "\nQuestion: " + questions
-                + "\nYour answer:");
-        intAnswer = scanner.nextInt();
-    }
-    public static int getIntAnswer() {
-        return intAnswer;
     }
     public static void uncorrectAnswer(String answer, String correctAnswer) {
         System.out.println("'" + answer + "' is wrong answer ;(. "
@@ -64,4 +44,38 @@ public class Engine {
                 + "Let's try again, " + playerName + "!");
 
     }
+    public static void stepGame(String condition, String questions, String correct, int count, int finalCount) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(condition
+                + "\nQuestion: " + questions
+                + "\nYour answer:");
+        stringAnswer = scanner.next();
+        if (correct.equals(stringAnswer)) {
+            congratulations(count, finalCount);
+        } else {
+            uncorrectAnswer(stringAnswer, correct);
+            System.exit(0);
+        }
+    }
+    public static void stepGame(String condition, String questions, int correct, int count, int finalCount) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(condition
+                + "\nQuestion: " + questions
+                + "\nYour answer:");
+        intAnswer = scanner.nextInt();
+        if (correct == intAnswer) {
+            congratulations(count, finalCount);
+        } else {
+            uncorrectAnswer(intAnswer, correct);
+            System.exit(0);
+        }
+    }
+    public static String getYesOrNo(boolean meaning) {
+        if (meaning) {
+            return "yes";
+        } else {
+            return "no";
+        }
+    }
+
 }

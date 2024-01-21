@@ -6,29 +6,20 @@ import java.util.Scanner;
 
 public class EvenNumber {
     public static void evenNumber() {
+        Engine.greeting();
         Scanner scanner = new Scanner(System.in);
-        for (var count = 0; count <= 2; count++) {
+        var finalCount = 2;
+        for (var count = 0; count <= finalCount; count++) {
             int randomNumber = Engine.getRandomNumber1();
-            var conditions = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-            var qestions = "" + randomNumber;
-
-            Engine.stringQestion(conditions, qestions);
-            var answer = Engine.getStringAnswer();
-            if (randomNumber % 2 == 0) {
-                if (answer.equals("yes")) {
-                    Engine.congratulations(count);
-                } else {
-                    Engine.uncorrectAnswer(answer, "yes");
-                    break;
-                }
-            } else {
-                if (answer.equals("no")) {
-                    Engine.congratulations(count);
-                } else {
-                    Engine.uncorrectAnswer(answer, "no");
-                    break;
-                }
-            }
+            var condition = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+            var question = "" + randomNumber;
+            var isEvenNumber = isEven(randomNumber);
+            var correct = Engine.getYesOrNo(isEvenNumber);
+            Engine.stepGame(condition, question, correct, count, finalCount);
         }
     }
+    public static boolean isEven(int num) {
+        return  num % 2 == 0;
+    }
 }
+

@@ -6,29 +6,16 @@ import java.util.Scanner;
 
 public class Prime {
     public static void prime() {
+        Engine.greeting();
         Scanner scanner = new Scanner(System.in);
-        for (var count = 0; count <= 2; count++) {
-            int randomNumber = Engine.getRandomNumber1();
+        var finalCount = 2;
+        for (var count = 0; count <= finalCount; count++) {
+            var randomNumber = Engine.getRandomNumber1();
             var condition = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
             var question = "" + randomNumber;
-
-            Engine.stringQestion(condition, question);
-            var answer = Engine.getStringAnswer();
-            if (isSimple(randomNumber)) {
-                if (answer.equals("yes")) {
-                    Engine.congratulations(count);
-                } else {
-                    Engine.uncorrectAnswer(answer, "yes");
-                    break;
-                }
-            } else {
-                if (answer.equals("no")) {
-                    Engine.congratulations(count);
-                } else {
-                    Engine.uncorrectAnswer(answer, "no");
-                    break;
-                }
-            }
+            var numIsSimple = isSimple(randomNumber);
+            var correct = Engine.getYesOrNo(numIsSimple);
+            Engine.stepGame(condition, question, correct, count, finalCount);
         }
     }
     public static boolean isSimple(Integer number) {
@@ -43,4 +30,5 @@ public class Prime {
         }
         return true;
     }
+
 }
