@@ -12,8 +12,8 @@ public class Progression {
         var condition = "What number is missing in the progression?";
 
         for (var count = 0; count <= finalCount; count++) {
-            int[] massivProgression = randomMassiv(8, Engine.getRandomNumber1(), Engine.getRandomNumber1());
-            var correct = massivProgression[massivProgression.length / 2];
+            int[] massivProgression = randomMassiv(5, Engine.getRandomNumber1(), Engine.getRandomNumber1());
+            var correct = massivProgression[2];
             var question = showMassiv(massivProgression);
             Engine.stepGame(condition, question, correct, count, finalCount);
         }
@@ -32,12 +32,12 @@ public class Progression {
     }
     public static String showMassiv(int[] massivProgression) {
         var result = massivProgression[0] + " ";
-        var middle = massivProgression.length / 2;
+        var middle = 2;
         for (var i = 1; i < massivProgression.length; i++) {
-            if (i == middle) {
-                result = result + " .. ";
-            } else {
+            if (i != middle) {
                 result = result + massivProgression[i] + " ";
+            } else {
+                result = result + " .. ";
             }
         }
         return  result;
