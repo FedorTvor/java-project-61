@@ -7,9 +7,11 @@ public class Progression {
         var finalCount = 2;
         var condition = "What number is missing in the progression?";
         for (var count = 0; count <= finalCount; count++) {
+            var min = 5;
+            var max = 9;
             var step = Engine.getRandomNumber1();
             var firstNum = Engine.getRandomNumber1();
-            var massivLength = randomDiaposon(5, 9);
+            var massivLength = randomDiaposon(min, max);
             var hiddenNumber = randomDiaposon(1, massivLength - 1);
             int[] massivProgression = randomMassiv(massivLength, step, firstNum);
             var correct = massivProgression[hiddenNumber];
@@ -18,13 +20,14 @@ public class Progression {
         }
     }
     public static int[] randomMassiv(int massiveLength, int step, int firstNum) {
+        var deffStep = 5;
         int[] result = new int[massiveLength];
         result[0] = firstNum;
         for (var i = 1; i < result.length; i++) {
             if (step != 0) {
                 result[i] = result[i - 1] + step;
             } else {
-                step = 5;
+                step = deffStep;
                 i--;
             }
         }
