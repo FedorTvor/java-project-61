@@ -1,13 +1,9 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Scanner;
-
 public class Calc {
     public static void calc() {
         Engine.greeting();
-        Scanner scanner = new Scanner(System.in);
         var finalCount = 2;
         for (var count = 0; count <= finalCount; count++) {
             var sym = randomGame();

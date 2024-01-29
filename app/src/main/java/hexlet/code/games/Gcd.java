@@ -1,13 +1,9 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Scanner;
-
 public class Gcd {
     public static void greatestCommonDivisor() {
         Engine.greeting();
-        Scanner scanner = new Scanner(System.in);
         var finalCount = 2;
         for (var count = 0; count <= finalCount; count++) {
             var randomNumber1 = Engine.getRandomNumber2();

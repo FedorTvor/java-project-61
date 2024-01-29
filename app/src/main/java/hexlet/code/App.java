@@ -32,7 +32,7 @@ public class App {
         } else if (choise.equals("6")) {
             Prime.prime();
         } else if (choise.equals("0")) {
-            System.out.println("Exit");
+            System.exit(0);
         }
     }
 }

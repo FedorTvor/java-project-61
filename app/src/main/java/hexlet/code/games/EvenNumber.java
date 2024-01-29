@@ -1,13 +1,9 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Scanner;
-
 public class EvenNumber {
     public static void evenNumber() {
         Engine.greeting();
-        Scanner scanner = new Scanner(System.in);
         var finalCount = 2;
         for (var count = 0; count <= finalCount; count++) {
             int randomNumber = Engine.getRandomNumber1();
