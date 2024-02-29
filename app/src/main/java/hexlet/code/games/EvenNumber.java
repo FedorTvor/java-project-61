@@ -16,12 +16,12 @@ public class EvenNumber {
     }
 
     public static String[][] question(int finalCount, int factor) {
-        String[][] result = new String[finalCount+1][finalCount+1];
+        String[][] result = new String[finalCount + 1][finalCount + 1];
         for (var step1 = 0; step1 <= finalCount; step1++)  {
             var randomNumber = Engine.getRandomNumber(factor);
             final String question = "" + randomNumber;
             String even = Engine.getYesOrNo(isEven(randomNumber));
-            result[step1][0]= randomNumber+"";
+            result[step1][0] = randomNumber + " ";
             result[step1][1] = question;
             result[step1][2] = even;
         }

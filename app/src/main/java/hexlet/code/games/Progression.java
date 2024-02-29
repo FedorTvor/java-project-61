@@ -11,7 +11,7 @@ public class Progression {
         Engine.stepGame(condition, question, finalCount);
     }
     public static String[][] question(int finalCount, int factor) {
-        String[][] result = new String[finalCount+1][finalCount+1];
+        String[][] result = new String[finalCount + 1][finalCount + 1];
         for (var step1 = 0; step1 <= finalCount; step1++)  {
             final int min = 5;
             final int max = 9;
@@ -23,7 +23,7 @@ public class Progression {
             final String question = showMassiv(massivProgression, hiddenNumber);
             int correctInt = massivProgression[hiddenNumber];
             String correct = correctInt + "";
-            result[step1][0]= null;
+            result[step1][0] = null;
             result[step1][1] = question;
             result[step1][2] = correct;
         }

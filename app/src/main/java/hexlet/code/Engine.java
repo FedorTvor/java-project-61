@@ -7,7 +7,9 @@ import java.util.Scanner;
 public class Engine {
     private static String playerName;
 
-    public static int getRandomNumber(int factor) {return (int) (Math.random() * factor);}
+    public static int getRandomNumber(int factor) {
+        return (int) (Math.random() * factor);
+    }
     public static String getPlayerName() {
         Scanner scanner = new Scanner(System.in);
         playerName = scanner.next();

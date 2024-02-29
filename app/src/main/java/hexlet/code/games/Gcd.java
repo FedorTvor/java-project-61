@@ -20,7 +20,7 @@ public class Gcd {
         return result;
     }
     public static String[][] question(int finalCount, int factor) {
-        String[][] result = new String[finalCount+1][finalCount+1];
+        String[][] result = new String[finalCount + 1][finalCount + 1];
         for (var step1 = 0; step1 <= finalCount; step1++)  {
             int randomNumber1 = Engine.getRandomNumber(factor);
             int randomNumber2 = Engine.getRandomNumber(factor);
