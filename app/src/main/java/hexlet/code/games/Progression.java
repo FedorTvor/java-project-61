@@ -4,20 +4,30 @@ import hexlet.code.Engine;
 public class Progression {
     public static void progression() {
         Engine.greeting();
-        var finalCount = 2;
-        final int min = 5;
-        final int max = 9;
-        var condition = "What number is missing in the progression?";
-        for (var count = 0; count <= finalCount; count++) {
-            var step = Engine.getRandomNumber1();
-            var firstNum = Engine.getRandomNumber1();
-            var massivLength = randomDiaposon(min, max);
-            var hiddenNumber = randomDiaposon(1, massivLength - 1);
+        final int finalCount = 2;
+        final int factor = 10;
+        final String condition = "What number is missing in the progression?";
+        var question = question(finalCount, factor);
+        Engine.stepGame(condition, question, finalCount);
+    }
+    public static String[][] question(int finalCount, int factor) {
+        String[][] result = new String[finalCount+1][finalCount+1];
+        for (var step1 = 0; step1 <= finalCount; step1++)  {
+            final int min = 5;
+            final int max = 9;
+            int  step = Engine.getRandomNumber(factor);
+            int firstNum = Engine.getRandomNumber(factor);
+            int massivLength = randomDiaposon(min, max);
+            int  hiddenNumber = randomDiaposon(1, massivLength - 1);
             int[] massivProgression = randomMassiv(massivLength, step, firstNum);
-            var correct = massivProgression[hiddenNumber];
-            var question = showMassiv(massivProgression, hiddenNumber);
-            Engine.stepGame(condition, question, correct, count, finalCount);
+            final String question = showMassiv(massivProgression, hiddenNumber);
+            int correctInt = massivProgression[hiddenNumber];
+            String correct = correctInt + "";
+            result[step1][0]= null;
+            result[step1][1] = question;
+            result[step1][2] = correct;
         }
+        return result;
     }
     public static int[] randomMassiv(int massiveLength, int step, int firstNum) {
         final int deffStep = 5;
